@@ -1,0 +1,15 @@
+{
+  "originHash" : "9c77478ca812fbc6dddb1df54dba9e1396adc7c52a67bcef3ce62bed51a727cd",
+  "pins" : [
+    {
+      "identity" : "wwimageformat",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWImageFormat",
+      "state" : {
+        "revision" : "1409ab986f70001d47320f461ce5d7219b46eab6",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
