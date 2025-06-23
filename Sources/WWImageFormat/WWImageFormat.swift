@@ -22,4 +22,11 @@ public extension WWImageFormat {
     func parseData(_ data: Data?) -> WWImageFormat.ImageDataFormat? {
         return data?._imageDataFormat()
     }
+    
+    /// 解析圖片格式
+    /// - Parameter data: 圖片資料
+    /// - Returns: WWImageFormat.ImageDataFormat?
+    func parseFormat(_ data: Data?) -> WWImageFormat.ImageFormat? {
+        return data?._imageFormat()
+    }
 }

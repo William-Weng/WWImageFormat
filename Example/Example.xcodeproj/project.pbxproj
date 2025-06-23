@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8102DD182E093EF4005FE527 /* WWImageFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 8102DD172E093EF4005FE527 /* WWImageFormat */; };
-		8102DD1B2E0940EE005FE527 /* WWImageFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 8102DD1A2E0940EE005FE527 /* WWImageFormat */; };
+		8102DD1E2E094498005FE527 /* WWImageFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 8102DD1D2E094498005FE527 /* WWImageFormat */; };
+		8102DD212E094EBD005FE527 /* WWImageFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 8102DD202E094EBD005FE527 /* WWImageFormat */; };
 		817567FC2CA2C2B400B24577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817567FB2CA2C2B400B24577 /* AppDelegate.swift */; };
 		817568002CA2C2B400B24577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817567FF2CA2C2B400B24577 /* ViewController.swift */; };
 		817568032CA2C2B400B24577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817568012CA2C2B400B24577 /* Main.storyboard */; };
@@ -40,7 +41,8 @@
 			files = (
 				818899AE2E0937B300955E69 /* WWImageFormat in Frameworks */,
 				8102DD182E093EF4005FE527 /* WWImageFormat in Frameworks */,
-				8102DD1B2E0940EE005FE527 /* WWImageFormat in Frameworks */,
+				8102DD1E2E094498005FE527 /* WWImageFormat in Frameworks */,
+				8102DD212E094EBD005FE527 /* WWImageFormat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +132,8 @@
 			packageProductDependencies = (
 				818899AD2E0937B300955E69 /* WWImageFormat */,
 				8102DD172E093EF4005FE527 /* WWImageFormat */,
-				8102DD1A2E0940EE005FE527 /* WWImageFormat */,
+				8102DD1D2E094498005FE527 /* WWImageFormat */,
+				8102DD202E094EBD005FE527 /* WWImageFormat */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -161,7 +164,7 @@
 			);
 			mainGroup = 817567EF2CA2C2B400B24577;
 			packageReferences = (
-				8102DD192E0940EE005FE527 /* XCRemoteSwiftPackageReference "WWImageFormat" */,
+				8102DD1F2E094EBD005FE527 /* XCRemoteSwiftPackageReference "WWImageFormat" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -429,7 +432,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8102DD192E0940EE005FE527 /* XCRemoteSwiftPackageReference "WWImageFormat" */ = {
+		8102DD1F2E094EBD005FE527 /* XCRemoteSwiftPackageReference "WWImageFormat" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWImageFormat";
 			requirement = {
@@ -444,9 +447,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWImageFormat;
 		};
-		8102DD1A2E0940EE005FE527 /* WWImageFormat */ = {
+		8102DD1D2E094498005FE527 /* WWImageFormat */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8102DD192E0940EE005FE527 /* XCRemoteSwiftPackageReference "WWImageFormat" */;
+			productName = WWImageFormat;
+		};
+		8102DD202E094EBD005FE527 /* WWImageFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8102DD1F2E094EBD005FE527 /* XCRemoteSwiftPackageReference "WWImageFormat" */;
 			productName = WWImageFormat;
 		};
 		818899AD2E0937B300955E69 /* WWImageFormat */ = {

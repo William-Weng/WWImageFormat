@@ -20,31 +20,40 @@ extension Data {
     /// 根據ImageHeader找出相對應的圖片Type (jpeg / png / gif) => 一個一個試，找到就結束 => 二進位型圖片
     /// - Parameter data: 圖片資料
     /// - Returns: Constant.ImageDataFormat?
-    func _imageDataFormat() -> WWImageFormat.ImageDataFormat? {
+    func _imageFormat() -> WWImageFormat.ImageFormat? {
         
         let imageDataArray = lazy.map({$0})
         let allCases = WWImageFormat.ImageFormat.allCases
+        let dataCount = imageDataArray.count
         
         var imageType: WWImageFormat.ImageFormat? = nil
-
+        
         allCases.forEach { (type) in
             
             let imageHeader = type.header
-            
-            if (imageDataArray.count < imageHeader.count) { imageType = nil; return }
+                        
+            if (dataCount < imageHeader.count) { imageType = nil; return }
             if (imageType != nil) { return }
             
             for index in 0..<imageHeader.count {
                 
                 let headerHexNumber = imageHeader[index]
-
+                
                 if (headerHexNumber == 0x00) { continue }
                 if (imageDataArray[index] != headerHexNumber) { imageType = nil; return }
                 imageType = type
             }
         }
         
-        guard let imageType = imageType else { return nil }
+        return imageType
+    }
+    
+    /// 根據ImageHeader找出相對應的圖片Type (jpeg / png / gif) => 一個一個試，找到就結束 => 二進位型圖片
+    /// - Parameter data: 圖片資料
+    /// - Returns: Constant.ImageDataFormat?
+    func _imageDataFormat() -> WWImageFormat.ImageDataFormat? {
+        
+        guard let imageType = _imageFormat() else { return nil }
         
         switch imageType {
         case .gif: return (imageType, _isAnimatedGIF())
