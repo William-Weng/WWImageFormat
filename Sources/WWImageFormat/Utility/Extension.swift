@@ -67,7 +67,7 @@ extension Data {
 // MARK: - Data (private function)
 private extension Data {
     
-    /// [測試是不是動畫的GIF？ => 搜尋frmae是不是只有一個](https://realnewbie.com/coding/basic-concent/jpg-png-apng-gif-svg/)
+    /// [測試是不是動畫的GIF？ => 搜尋frame是不是只有一個](https://realnewbie.com/coding/basic-concent/jpg-png-apng-gif-svg/)
     func _isAnimatedGIF() -> Bool {
 
         let bytes = lazy.map({$0})
